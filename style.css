@@ -1,0 +1,52 @@
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#calculadora {
+    height: 500px;
+    width: 250px;
+    background-color: black;
+    border-radius: 10%;
+}
+
+#text {
+    height: 20%;
+    width: 91%;
+    background-color: black;
+    border-radius: 5%;
+    color: white;
+    font-size: x-large;
+}
+
+button {
+    height: 15%;
+    width: 22%;
+    border-radius: 50%;
+    font-size:x-large;
+   margin: 2px;
+   padding: 2px;
+   border: none;
+
+}
+
+#b0 {
+    width: 46%;
+}
+
+.buttonA {
+    background-color: #B6B6B6;
+    color: black;
+}
+
+.buttonB {
+    background-color: #FF6000;
+    color: white;
+}
+
+.buttonC {
+    background-color: #535353;
+    color: white;
+}
