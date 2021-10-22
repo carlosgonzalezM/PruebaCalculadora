@@ -1,3 +1,15 @@
+let hora = document.getElementById("hora");
+let horaLocal = new Date();
+
+window.setInterval( ()=>{
+    if(horaLocal.getHours() >= 12){
+        hora.innerHTML = horaLocal.getHours()-12 + ":" + horaLocal.getMinutes() + " PM";
+    }else{
+        hora.innerHTML = horaLocal.getHours() + ":" + horaLocal.getMinutes() + " AM";
+    }
+    
+}, 1000)
+
 function button9(){
     document.getElementById("text").value += 9;
 }
