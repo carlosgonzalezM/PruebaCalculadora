@@ -1,3 +1,13 @@
+@font-face {
+    font-family: SF;
+    src: url(../font/SFNSText-Regular.otf);
+}
+
+*{
+    font-family: SF;
+    font-size: 15.7px;
+}
+
 body {
     height: 96vh;
     width: 98vw;
@@ -10,6 +20,13 @@ body {
     width: 236px;
     background: url(../img/calculadora.png) no-repeat;
     padding: 4rem 2rem;
+}
+
+#hora{
+    color: white;
+    margin-top: -38px;
+    margin-left: 10px;
+    font-size: 10px;
 }
 
 #text {
