@@ -1,14 +1,13 @@
 let hora = document.getElementById("hora");
-let horaLocal = new Date();
 
 window.setInterval( ()=>{
+    let horaLocal = new Date();
     if(horaLocal.getHours() > 12){
         hora.innerHTML = horaLocal.getHours()-12 + ":" + horaLocal.getMinutes() + " PM";
     }else{
-        hora.innerHTML = horaLocal.getHours() + ":" + horaLocal.getMinutes() + " AM";
-    }
-    
-}, 1000)
+        hora.innerHTML = horaLocal.getHours() + ":" + (horaLocal.getMinutes() < 9? "0" + horaLocal.getMinutes():horaLocal.getMinutes()) + " AM";
+    }    
+}, 1000);
 
 function button9(){
     document.getElementById("text").value += 9;
@@ -85,7 +84,7 @@ function buttonMasMen(){
 
 function resultado(){
     var expresion = document.getElementById("text").value;
-    let regE = new RegExp(`[0-9\\.\\-]+[\*\/\\-\+]{1}[0-9\\.]+`);
+    let regE = new RegExp(`[0-9\\.\\-]+[\*\/\\-\%\+]{1}[0-9\\.]+`);
     cumple = regE.exec(expresion);
     try {
         if(cumple[0] == expresion && cumple[0] != null){
