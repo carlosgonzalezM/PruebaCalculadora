@@ -71,7 +71,9 @@ function buttonDiv(){
 }
 
 function buttonPorc(){
-    document.getElementById("text").value += "%" ;
+
+    var porcentaje = document.getElementById("text").value +="/100" ;
+    document.getElementById("text").value =eval(porcentaje);
 }
 
 function buttonAC(){
@@ -85,7 +87,8 @@ function buttonMasMen(){
 function resultado(){
     var expresion = document.getElementById("text").value;
     let regE = new RegExp(`[0-9\\.\\-]+[\*\/\\-\%\+]{1}[0-9\\.]+`);
-    cumple = regE.exec(expresion);
+
+    cumple = regE.exec(expresion); 
     try {
         if(cumple[0] == expresion && cumple[0] != null){
             document.getElementById("text").value = eval(expresion);
